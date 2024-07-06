@@ -1,0 +1,222 @@
+@charset "utf-8";
+.header_contents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 55/ 1920 = 0.02864... 2.8%*/
+    padding-left: 2.8%;
+    /* 150/ 1920 = 0.78125... 7.8%*/
+    padding-right: 7.8%;
+    position: absolute;
+    width: 100%;
+}
+.header_nav ul{
+    display: flex;
+    gap: 74px;
+}
+
+.header_nav li{
+    color: #fff;
+    font-weight: bold;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.logo{
+    width: 226px;
+}
+
+.main_contents{
+    width: 100%;
+    background-color: #e8d9bf;          /*全体の背景色を設定*/
+}
+
+.copy, #Aboutus, #Menu, #Event{
+    max-width: 1020px;                      /*最大幅を1020pxにする（両端に10pxの内部余白があるため）*/
+    margin: 0 auto;                         /*左右中央揃え*/
+    padding: 0 10px;                        /*両端に10pxの内部余白*/
+}
+
+#Gallery, #Access{
+    width: 100%;                            /*画面幅いっぱいに表示*/
+}
+
+.copy{
+    padding-top: 108px;
+    padding-bottom: 100px;
+    text-align: center;                     /*copyを中央揃えに*/
+}
+
+.copy_prev_title{
+    font-size: 30px;
+}
+
+.copy_title{
+    padding: 64px 0 46px 0;
+    font-size: 82px;
+    letter-spacing: 0.1em;                  /*トラッキング100/1000em*/
+    line-height: 1.17;                      /*行高96/82*/
+}
+
+.copy_lead{
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    line-height: 1.65;                      /*行高38/23*/
+}
+
+h2{
+    text-align: center;                     /*各タイトルを中央揃えに*/
+}
+
+.contents_title{
+    height: 77px;                           /*タイトル画像のサイズ指定*/
+    width: auto;
+}
+
+#Aboutus{
+    display: flex;                          /*#Aboutusの要素を横並びに*/
+}
+
+#Aboutus ul{
+    display: block;                         /*#Aboutusの中のulの横並びを解除*/
+    padding-left: 79px;
+}
+
+#Aboutus ul h2{
+    text-align: left;                       /*h2に指定していた中央揃えを解除*/
+}
+
+.Aboutus_title_img{
+    padding: 58px 0 49px;
+}
+
+.Aboutus_img{
+    width: 500px;
+    height: 560px;
+    border-bottom-right-radius: 82.373px;   /*右下の角丸指定*/
+}
+
+.Aboutus_copy{
+    font-size: 44px;
+    line-height: 1.39;                      /*行高61/44*/
+}
+
+.Aboutus_text{
+    max-width: 410px;
+    font-size: 16px;
+    line-height: 1.63;                      /*行高26/26*/
+    text-align: justify;                    /*均等割付*/
+    padding-top: 24px;
+}
+
+.Menu_title_img{
+    margin: 107px 0 48px 0;
+}
+
+ul{
+    display: flex;                          /*ulの子要素liを横並びにする*/
+}
+
+.Menu_img{
+    max-width: 300px;
+    max-height: 200px;
+    border-top-right-radius: 41.643px;      /*右上の角丸指定*/
+    margin-right: 48px;
+}
+
+.Menu_title{
+    font-size: 38px;
+    line-height: 1.73;                      /*行高38/22*/
+    color: #d30202;
+    margin:-27px 0 0 12px;                  /*上部にネガティブマージンを指定し、文字を写真にかぶせる*/
+}
+
+.Menu_text{
+    max-width: 300px;
+    font-size: 17px;
+    line-height: 1.47;                      /*行高25/17*/
+}
+
+.Menu_img_end{
+    margin-right: 0;                        /*Menu_imgの最後の右側の余白を解除する*/
+}
+
+.Gallery_title_img{
+    margin: 50px 0 26px 0;
+}
+
+.Gallery_list{
+    justify-content: center;                /*Gallery_listの子要素を中央揃えにする*/
+}
+
+.Gallery_list li{
+    width: 384px;
+    height: 300px;
+}
+
+.Event_title_img{
+    margin: 71px 0 40px 0;
+}
+
+.Event_list{
+    width: 100%;
+    height: 200px;
+    padding: 1.96em 0 1.96em 111px;
+    border: 3.6843px solid #4f260b;
+    background-color: #fff;
+}
+
+.Event_list li{
+    font-size: 23px;
+    line-height: 1.96;                      /*行高45/23*/
+}
+
+time{
+    padding-right: 48px;
+}
+
+.Access_title_img{
+    margin: 68px 0 37px 0;
+}
+
+iframe{
+    width: 100%;
+    height: 471px;
+    filter: grayscale(100%) invert(92%) contrast(83%);  /*地図をダークモードに*/
+}
+
+#footer{
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+
+}
+.footer_contents{
+    padding: 82px 0 80px 0;
+    display: flex;                          /*footer_contentsの子要素を横並びにする*/
+}
+
+.store_info{
+    padding-left: 68px;
+}
+
+.store_info ul{
+    display: block;                         /*store_infoのliを縦並びにする*/
+    text-align: left;                       /*liを左揃えにする*/
+}
+
+.store_info ul li{
+    font-size: 20px;
+    line-height: 1.95;                      /*行高39/20*/
+}
+
+small{
+    padding-bottom: 80px;
+}
+
+.toTop{
+    position: fixed;                        /*toTopの位置を固定する*/
+    right: 20px;                            /*positionプロパティの際位置を設定可能*/
+    bottom: 20px;
+    width: 125px;
+}
