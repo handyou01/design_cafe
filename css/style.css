@@ -74,28 +74,27 @@ h2{
 
 #Aboutus{
     display: flex;                          /*#Aboutusの要素を横並びに*/
+    align-items: center;                    /*上下中央に*/
 }
 
-#Aboutus ul{
-    display: block;                         /*#Aboutusの中のulの横並びを解除*/
-    padding-left: 79px;
-}
-
-#Aboutus ul h2{
-    text-align: left;                       /*h2に指定していた中央揃えを解除*/
-}
-
-.Aboutus_title_img{
-    padding: 58px 0 49px;
+.Aboutus_img_area{
+    width: 50%;                             /*Aboutus_imgを囲うdivに対して幅50%を指定*/
 }
 
 .Aboutus_img{
-    width: 500px;
-    height: 560px;
     border-bottom-right-radius: 82.373px;   /*右下の角丸指定*/
 }
 
+.Aboutus_text_area h2{
+    text-align: left;                       /*h2に指定していた中央揃えを解除し左揃えに*/
+}
+
+.Aboutus_text_area{
+    padding-left: 7.9%;
+}
+
 .Aboutus_copy{
+    padding: 49px 0 24px;
     font-size: 44px;
     line-height: 1.39;                      /*行高61/44*/
 }
@@ -105,7 +104,6 @@ h2{
     font-size: 16px;
     line-height: 1.63;                      /*行高26/26*/
     text-align: justify;                    /*均等割付*/
-    padding-top: 24px;
 }
 
 .Menu_title_img{
@@ -116,11 +114,13 @@ ul{
     display: flex;                          /*ulの子要素liを横並びにする*/
 }
 
+.Menu_list{
+    gap: 4.8%;
+}
 .Menu_img{
     max-width: 300px;
     max-height: 200px;
     border-top-right-radius: 41.643px;      /*右上の角丸指定*/
-    margin-right: 48px;
 }
 
 .Menu_title{
@@ -131,26 +131,17 @@ ul{
 }
 
 .Menu_text{
-    max-width: 300px;
     font-size: 17px;
     line-height: 1.47;                      /*行高25/17*/
-}
-
-.Menu_img_end{
-    margin-right: 0;                        /*Menu_imgの最後の右側の余白を解除する*/
+    text-align: justify;                    /*均等割付*/
 }
 
 .Gallery_title_img{
     margin: 50px 0 26px 0;
 }
 
-.Gallery_list{
-    justify-content: center;                /*Gallery_listの子要素を中央揃えにする*/
-}
-
 .Gallery_list li{
-    width: 384px;
-    height: 300px;
+    width: 20%;
 }
 
 .Event_title_img{
@@ -159,10 +150,15 @@ ul{
 
 .Event_list{
     width: 100%;
-    height: 200px;
-    padding: 1.96em 0 1.96em 111px;
+    padding: 1.96em 0;
     border: 3.6843px solid #4f260b;
     background-color: #fff;
+}
+
+.Event_list ul{
+    display: block;                         /*横並びを解除*/
+    max-width: 675px;                       /*最長の行に合わせて幅指定*/
+    margin: 0 auto;                         /*中央揃え*/
 }
 
 .Event_list li{
@@ -171,7 +167,11 @@ ul{
 }
 
 time{
-    padding-right: 48px;
+    padding-right: 45px;
+}
+
+.news_list{
+    border-bottom: 1px solid #4f260b;       /*イベントのテキスト部分に下線*/
 }
 
 .Access_title_img{
