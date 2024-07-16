@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -29,8 +30,26 @@
                 </ul>
             </nav>
         </div>
+
+        <div class="humberger">
+            <span></span>
+        </div>
+
+        <nav class="header_nav-sp">
+            <ul>
+                <li><a href="#Aboutus">ABOUT US</a></li>
+                <li><a href="#Menu">MENU</a></li>
+                <li><a href="#Gallery">GALLERY</a></li>
+                <li><a href="#Event">EVENT</a></li>
+                <li><a href="#Access">ACCESS</a></li>
+            </ul>
+        </nav>
+
         <div class="mainvisual">
-            <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子" />
+            <picture>
+                <source srcset="./images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)" />
+                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子" />
+            </picture>
         </div>
     </header>
 
@@ -39,8 +58,10 @@
             <section class="copy">
                 <span class="copy_prev_title">Have a happy day From a cup of coffee.</span>
                 <h3 class="copy_title">ハッピーに溢れる1日を<br>1杯のコーヒーから。</h3>
-                <sapn class="copy_lead">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
-                    足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</sapn>
+                <p class="copy_lead">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+                    足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+                <p class="copy_lead_sp">毎日を丁寧に大切に過ごしたい。<br>だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+                    足を運んでくれるお客さんには落ち着く空間と<br>こだわりのコーヒーを提供したい。</p>
             </section>
             <div class="main_section">
                 <section id="Aboutus">
@@ -55,6 +76,15 @@
                             サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します
                         </p>
                     </div>
+                </section>
+                <section id="Aboutus_sp">
+                    <h2><img class="contents_title Aboutus_title_img" src="./images/about_us@2x.png" alt="Aoutus">
+                    </h2>
+                    <img class="Aboutus_img" src="./images/about_us@2x-100.jpg" alt="カップを合わせる手">
+                    <p class="Aboutus_copy">私たちが提供する<br>こだわりのコーヒー</p>
+                    <p class="Aboutus_text">
+                        サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します
+                    </p>
                 </section>
                 <section id="Menu">
                     <h2><img class="contents_title Menu_title_img" src="./images/menu@2x.png" alt="Menu"></h2>
@@ -89,21 +119,21 @@
                 <section id="Event">
                     <h2><img class="contents_title Event_title_img" src="./images/event@2x.png" alt="Event">
                     </h2>
-                    <div class="Event_list">
-                        <ul>
+                    <div class="Event_list_area">
+                        <ul class="Event_list">
                             <li> <a href="">
                                     <time datetime="2020-06-23">2020.06.23</time>
-                                    <span class="news_list">7月はイベント出店のため0/0お休みします</span>
+                                    <div class="news_list">7月はイベント出店のため0/0お休みします</div>
                                 </a>
                             </li>
                             <li><a href="">
                                     <time datetime="2020-03-15">2020.03.15</time>
-                                    <span class="news_list">春の新商品新発売。話題のあのブランドとコラボ</span>
+                                    <div class="news_list">春の新商品新発売。話題のあのブランドとコラボ</div>
                                 </a>
                             </li>
                             <li><a href="">
                                     <time datetime="2020-02-06">2020.02.06</time>
-                                    <span class="news_list">コーヒーの日で30％OFFイベントを開催［3日間限定］</span>
+                                    <div class="news_list">コーヒーの日で30％OFFイベントを開催［3日間限定］</div>
                                 </a>
                             </li>
                         </ul>
@@ -139,6 +169,14 @@
             <small>© 2021 DESIGN CAFE</small>
             <p class="toTop"><a href="#header"><img src="./images/to_top@2x.png" alt="トップへ戻る"></a></p>
         </footer>
+        <script>
+            $(function () {
+                $(".humberger").click(function () {
+                    $(".humberger").toggleClass("open");
+                    $(".header_nav-sp").fadeToggle();
+                });
+            });
+        </script>
 
     </div>
 

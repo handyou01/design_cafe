@@ -40,6 +40,10 @@
     width: 100%;                            /*画面幅いっぱいに表示*/
 }
 
+.copy_lead_sp, #Aboutus_sp{
+    display: none;
+    }
+
 .copy{
     padding-top: 108px;
     padding-bottom: 100px;
@@ -81,7 +85,7 @@ h2{
     width: 50%;                             /*Aboutus_imgを囲うdivに対して幅50%を指定*/
 }
 
-.Aboutus_img{
+#Aboutus .Aboutus_img{
     border-bottom-right-radius: 82.373px;   /*右下の角丸指定*/
 }
 
@@ -102,7 +106,7 @@ h2{
 .Aboutus_text{
     max-width: 410px;
     font-size: 16px;
-    line-height: 1.63;                      /*行高26/26*/
+    line-height: 1.63;                      /*行高26/16*/
     text-align: justify;                    /*均等割付*/
 }
 
@@ -148,22 +152,23 @@ ul{
     margin: 71px 0 40px 0;
 }
 
-.Event_list{
+.Event_list_area{
     width: 100%;
     padding: 1.96em 0;
     border: 3.6843px solid #4f260b;
     background-color: #fff;
 }
 
-.Event_list ul{
+.Event_list{
     display: block;                         /*横並びを解除*/
     max-width: 675px;                       /*最長の行に合わせて幅指定*/
     margin: 0 auto;                         /*中央揃え*/
 }
 
-.Event_list li{
+.Event_list a{
     font-size: 23px;
-    line-height: 1.96;                      /*行高45/23*/
+    padding: 10px 0;
+    display: flex;
 }
 
 time{
@@ -205,7 +210,7 @@ iframe{
     text-align: left;                       /*liを左揃えにする*/
 }
 
-.store_info ul li{
+.store_info li{
     font-size: 20px;
     line-height: 1.95;                      /*行高39/20*/
 }
@@ -219,4 +224,234 @@ small{
     right: 20px;                            /*positionプロパティの際位置を設定可能*/
     bottom: 20px;
     width: 125px;
+}
+
+.humberger,
+.header_nav-sp{
+    display: none;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .header_nav{
+        display: none;
+    }
+    .humberger{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: ponter;
+        z-index: 9999;
+    }
+    /* hamメニューの線を3本用意する */
+    .humberger span{
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        top: 13px;                      /* 親要素.humbergerの中央*/
+        transition: .3s;
+    }
+
+    /* hamメニュー（疑似要素） */
+    .humberger span::before{
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        top: -13px;
+        transition: .3s;
+    }
+    .humberger span::after{
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        content: "";
+        bottom: -13px;
+        transition: .3s;
+    }
+
+    /* hamメニューのがクリックされた時の動き*/
+    .open span{
+        background-color: transparent;
+    }
+
+    .open span::before{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .open span::after{
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .header_nav span{
+        position: absolute;
+    }
+
+    .header_nav-sp{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #0000006c;
+    }
+
+    .header_nav-sp ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+    }
+
+    .header_nav-sp li{
+        color: #fff;
+        font-weight: bold;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+
+    .copy_title {
+        font-size: 60px;
+    }
+
+    .copy_lead {
+        font-size: 20px;
+    }
+
+    .toTop{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .copy{
+        padding: 40px 0;
+    }
+
+    .copy_prev_title{
+        font-size: 17px;
+    }
+
+    .copy_title{
+        padding: 34px 0 26px 0;
+        font-size: 38px;
+        letter-spacing: 0.02em;                     /*トラッキング20/1000em*/
+        line-height: 1.16;                          /*行高44/38*/
+    }
+
+    .copy_lead, #Aboutus{
+        display: none;
+    }
+
+    .copy_lead_sp{
+        display: block;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 1.88;                              /*行高30/16*/
+    }
+
+    .contents_title{
+        height: 45px;
+    }
+    
+    #Aboutus_sp{
+        display: block;
+    }
+
+    #Aboutus_sp .Aboutus_copy{
+        padding: 37px 20px;
+        font-size: 36px;
+        line-height: 1.25;                      /*行高45/36*/
+    }
+
+    #Aboutus_sp .Aboutus_text{
+        max-width: 100vw;
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 1.31;                      /*行高21/16*/
+        text-align: justify;                    /*均等割付*/
+
+    }
+
+    .Menu_title_img{
+        margin: 0;                              /*PCのmarginn設定破棄*/
+        padding: 50px 0 23px 0;
+    }
+
+    .Menu_list{
+        display: block;
+        padding: 0 20px;
+    }
+
+    .Menu_img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .Menu_text{
+        line-height: 1.24;                      /*行高21/17*/
+        text-align: justify;
+        padding: 10px 0 60px 0;
+    }
+
+    .Gallery_list img{
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    .Gallery_list li:not(:nth-child(3)){
+        display: none;                          /*リストの3番目以外を表示しない*/
+    }
+
+    #Event{
+        padding: 0 20px;
+    }
+    .Event_list_area{
+        padding: 0;                             /*pdddingの指定解除*/
+    }
+
+    .Event_list a{
+        display: block;                         /*aの子要素を縦並びに*/
+        font-size: 16px;
+        padding: 15px 20px;
+        max-width: max-content;                 /*表示させる文字数の最大値をコンテンツに依存する*/
+    }
+
+    .news_list{
+        white-space: nowrap;                    /*改行を半角スペースに置き換える*/
+        overflow: hidden;                       /*指定した幅よりはみ出した文字を非表示にする*/
+        text-overflow: ellipsis;                /*末尾に...を表示*/
+    }
+    .footer_contents{
+        display: block;
+        padding: 48px 20px;
+    }
+
+    .store_info{
+        padding: 36px 0 0 0;                    /*padding-left解除*/
+    }
+
+    .store_info li{
+        font-size: 18px;
+        line-height: 1.72;                      /*行高31/18*/
+    }
+
+    small{
+        padding-bottom: 33px;
+    }
+
+    .toTop{
+        position: fixed;                        /*toTopの位置を固定する*/
+        right: 10px;                            /*positionプロパティの際位置を設定可能*/
+        bottom: 10px;
+        width: 100px;
+    }
 }
