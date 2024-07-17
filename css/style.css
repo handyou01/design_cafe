@@ -348,7 +348,7 @@ small{
     }
 
     .copy_lead, #Aboutus{
-        display: none;
+        display: none;                              /*PC用の要素を非表示に*/
     }
 
     .copy_lead_sp{
@@ -387,7 +387,7 @@ small{
     }
 
     .Menu_list{
-        display: block;
+        display: block;                         /*Menu_listの子要素を縦並びにする*/
         padding: 0 20px;
     }
 
@@ -402,9 +402,8 @@ small{
         padding: 10px 0 60px 0;
     }
 
-    .Gallery_list img{
-        width: 100vw;
-        max-width: 100vw;
+    .Gallery_list li{
+        width: 100%;                            /*Gallery_list liに指定していたwidth20%を変更*/
     }
 
     .Gallery_list li:not(:nth-child(3)){
@@ -448,6 +447,9 @@ small{
         padding-bottom: 33px;
     }
 
+    iframe{
+        height: 190px;
+    }
     .toTop{
         position: fixed;                        /*toTopの位置を固定する*/
         right: 10px;                            /*positionプロパティの際位置を設定可能*/
