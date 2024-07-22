@@ -9,6 +9,7 @@
     padding-right: 7.8%;
     position: absolute;
     width: 100%;
+    z-index: 9997;
 }
 .header_nav ul{
     display: flex;
@@ -144,6 +145,10 @@ ul{
     margin: 50px 0 26px 0;
 }
 
+.Gallery_list{
+    display: flex;
+}
+
 .Gallery_list li{
     width: 20%;
 }
@@ -231,6 +236,9 @@ small{
     display: none;
 }
 
+.lb-data .lb-details {
+    color: #fff;
+}
 
 @media screen and (max-width: 1100px) {
     .header_nav{
@@ -301,6 +309,7 @@ small{
         width: 100%;
         height: 100vh;
         background-color: #0000006c;
+        z-index: 9998;
     }
 
     .header_nav-sp ul{
@@ -406,9 +415,17 @@ small{
         width: 100%;                            /*Gallery_list liに指定していたwidth20%を変更*/
     }
 
-    .Gallery_list li:not(:nth-child(3)){
-        display: none;                          /*リストの3番目以外を表示しない*/
+    .lightboxOverlay{
+        height: 500px;
     }
+
+.lb-outerContainer{
+    margin: auto;
+}
+
+    /*.Gallery_list li:not(:nth-child(3)){
+        display: none;                          /*リストの3番目以外を表示しない*/
+    /*}*/
 
     #Event{
         padding: 0 20px;
@@ -457,3 +474,20 @@ small{
         width: 100px;
     }
 }
+
+.slick-dots{
+    bottom: 0;
+}
+
+.slick-dots li button:before{
+    color: #fff;
+}
+
+.slick-dotted.slick-slider{
+    margin: 0;
+}
+
+.slick-dots li.slick-active button:before{
+    color: #fff;
+}
+
